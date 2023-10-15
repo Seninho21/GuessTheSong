@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indovina la canzone</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="messaggio"></div>
+	<!-- PAGINA INIZIALE -->
+	<div id="pagina-iniziale">
+	
+	<game-app>
+<game-theme-manager>
+    <div id="game">
+		<div  class="container">
+			<!-- HEADER -->
+      <header>
+        <div class="menu">
+			<button onclick="clickHelp()" class="icon" ><img src="Icon/help.png" alt="help" id="button.icon" >
+			</button>
+		  </div>
+		<h1>Indovina la canzone</h1>
+		<div class="menu">
+			<button onclick="toggleDarkMode()" class="icon" ><img src="Icon/dark.png" alt="help" id="button.icon">
+			</button>
+		  </div>
+      </header>
+	  		<!-- FINE HEADER -->
+
+      <h2>Indovina l'inizio di una famosa canzone:</h2>
+			
+			<br>
+		<h3> "Is this the real life? Is this just fantasy?"</h3> 
+		
+	
+		<!-- le righe di testo da visualizzare successivamente -->
+		<div id="text1" style="display: none;">
+			<h3>"Caught in a landslide, No escape from reality"</h3>
+		</div>
+		<div id="text2" style="display: none;">
+			<h3>"Open your eyes, look up to the skies and see"</h3>
+		</div>
+		<div id="text3" style="display: none;">
+			<h3>"I'm just a poor boy, i need no sympathy"</h3>
+		</div>
+		<div id="text4" style="display: none;">
+			<h2>Prova con un aiuto in più, il ritornello!</h2>
+			<h3>"Mama, just killed a man, put a gun against his head.."</h3>
+		</div>
+	
+	
+			<!-- INPUT FIELD E BUTTON -->
+		<input type="text" id="title" placeholder="Inserisci il titolo della canzone">
+		<button type="submit" id="submit" onclick="checkSong();" >Indovina</button>
+
+			<!-- FINE INPUT FIELD E BUTTON -->
+	
+
+			<!-- POPUP DISPLAY SE HAI VINTO (MOMENTANEO) -->
+		<div id="popup" style="display: none;">
+			<h2>Hai vinto!</h2>
+			<script> win==true; </script>
+			<p>Complimenti, hai indovinato la canzone!</p>
+		</div>
+			<!-- FINE POPUP -->
+
+		<!-- VISUALIZZAZIONE VITE -->
+		<div id="lives">
+			<h3>Vite rimaste: <span id="lives-count">5</span></h3>
+		</div>
+		
+		<script src="script.js"></script>
+	</div>
+    </div>
+</div>
+
+<!-- Nuove Pagine: PAGINA HELP-->
+	<div  class="container">
+	<div id="pagina-nascosta">
+		<header>
+			<h1>Come giocare</h1>
+			<div class="menu">
+				<button onclick="returnclickHelp()" class="icon" ><img src="Icon/close.png" alt="close" id="button.icon" >
+				</button>
+			  </div>
+		  </header>
+	</div>
+</div>
+
+<div  class="container">
+	<div id="pagina-nascosta-played">
+		<header>
+			<h1>Indovina la canzone</h1>
+			<h3>Le tue statistiche:</h3>
+			<div class="menu">
+			  </div>
+		  </header>
+	</div>
+</div>
+
+<!-- Aggiungi il codice HTML per la finestra modale -->
+<div id="modal-vittoria" class="modal">
+	<div class="modal-contenuto">
+		<h2>Complimenti, hai vinto!</h2>
+		<p>Bravo, hai completato il gioco con successo.</p>
+		<button onclick="chiudiFinestraModale()">Chiudi</button>
+	</div>
+</div>
+  </game-theme-manager>
+
+	</game-app>
+
+	
+
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Centra il contenitore del testo */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Aggiunge uno stile ai pulsanti */
+  button {
+    border-radius: 20px;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+  }
+    
+  /* Aggiunge uno stile all'input field */
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    font-size: 20px;
+  }
+  
+  .toaster {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    width: fit-content;
+  }
+  #game-toaster {
+    z-index: 1000;
+  }
+  #system-toaster {
+    z-index: 4000;
+  }
+
+  #game {
+    width: 100%;
+    max-width: var(--game-max-width);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    color: var(--color-tone-1);
+    border-bottom: 1px solid var(--color-tone-4);
+  }
+  header.title {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  #board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding:10px;
+    box-sizing: border-box;
+  }
+  button.icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  #debug-tools {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  #pagina-iniziale {
+    display: block;
+  }
+
+  #pagina-nascosta {
+    display: none;
+    
+  }
+  #pagina-nascosta-settings {
+    display: none;
+    
+  }
+
+  #pagina-nascosta-played {
+    display: none;
+    
+  }
+  
+  body {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .dark-mode {
+    background-color: #0e0d0d;
+    color: #fff;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
