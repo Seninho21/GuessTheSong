@@ -1,6 +1,5 @@
-
-const songTitle = "Bohemian Rhapsody";
-const startOfLyrics = "Is this the real life? Is this just fantasy?";
+const songTitle = "Nel blu dipinto di blu";
+const startOfLyrics = "Penso che un sogno così non ritorni mai più";
 const guessInput = document.getElementById("title");
 const popup = document.getElementById("popup");
 const livesCount = document.getElementById("lives-count");
@@ -84,7 +83,7 @@ function handleIncorrectGuess() {
 
 
   function gameOver(){
-    alert("Spiacenti, non hai indovinato la canzone.");
+    alert("Spiacenti, non hai indovinato. La canzone era -Bohemian Rhapsody-");
   }
 
 
