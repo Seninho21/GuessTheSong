@@ -83,7 +83,7 @@ function handleIncorrectGuess() {
 
 
   function gameOver(){
-    alert("Spiacenti, non hai indovinato. La canzone era -Bohemian Rhapsody-");
+    alert("Spiacenti, non hai indovinato. La canzone era "+songTitle);
   }
 
 
